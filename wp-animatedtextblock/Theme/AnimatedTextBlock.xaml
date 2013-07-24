@@ -1,0 +1,40 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:controls="clr-namespace:Chartreuse.Today.Controls">
+
+    <Style TargetType="controls:AnimatedTextBlock">
+        <Setter Property="Background" Value="{StaticResource PhoneBackgroundBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value >
+                <ControlTemplate TargetType="controls:AnimatedTextBlock">
+                    <Grid >
+                        <Border 
+                            x:Name="PART_A"
+                            Background ="{TemplateBinding Background}">
+                            <Border.Projection >
+                                <PlaneProjection 
+                                    CenterOfRotationY="0.5" 
+                                    CenterOfRotationZ ="-6" />
+                            </Border.Projection>
+                            <TextBlock/>
+                        </Border>
+                        <Border 
+                            x:Name="PART_B"
+                            Background ="{TemplateBinding Background}"
+                            Visibility ="Collapsed">
+                            <Border.Projection>
+                                <PlaneProjection 
+                                    CenterOfRotationY="0.5"
+                                    CenterOfRotationZ ="-6"/>
+                            </Border.Projection>
+                            <TextBlock/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>
